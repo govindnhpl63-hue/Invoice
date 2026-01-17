@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Bill</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 20px;
+        }
+
+        /* MAIN BILL BOX */
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .company h2 {
+            margin: 0;
+            color: #2b547e;
+        }
+
+        .invoice-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* INFO SECTION */
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            width: 48%;
+        }
+
+        .info-box p {
+            margin: 4px 0;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: #2b547e;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* TOTAL SECTION */
+        .total-box {
+            margin-top: 20px;
+            float: right;
+            width: 300px;
+        }
+
+        .total-box table {
+            width: 100%;
+        }
+
+        .total-box td {
+            padding: 8px;
+        }
+
+        .total-box tr:last-child td {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: gray;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="invoice-box">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="company">
+                <h2>Customer Name</h2>
+                <p>Local Delivery</p>
+                <p>Phone: XXX-XXX-XXXX</p>
+            </div>
+
+            <div class="invoice-title">
+                INVOICE
+            </div>
+        </div>
+
+        <!-- CUSTOMER INFO -->
+        <div class="info">
+
+            <div class="info-box">
+                <strong>Bill To:</strong>
+                <p>Customer Name</p>
+                <p>Area Name</p>
+                <p>Address Line</p>
+            </div>
+
+            <div class="info-box">
+                <strong>Invoice Details:</strong>
+                <p>Invoice No: INV-1001</p>
+                <p>Date: 17-Jan-2026</p>
+                <p>Payment Mode: CASH</p>
+            </div>
+
+        </div>
+
+        <!-- ITEM TABLE -->
+        <table>
+
+            <tr>
+                <th>Item Name</th>
+                <th>Qty</th>
+                <th>Rate (₹)</th>
+                <th>Amount (₹)</th>
+            </tr>
+
+            <tr>
+                <td>Veg Thali</td>
+                <td>2</td>
+                <td>120</td>
+                <td>240</td>
+            </tr>
+
+            <tr>
+                <td>Chapati</td>
+                <td>5</td>
+                <td>10</td>
+                <td>50</td>
+            </tr>
+
+            <tr>
+                <td>Dal Fry</td>
+                <td>1</td>
+                <td>80</td>
+                <td>80</td>
+            </tr>
+
+        </table>
+
+        <!-- TOTAL SECTION -->
+        <div class="total-box">
+
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>₹370</td>
+                </tr>
+
+                <tr>
+                    <td>GST (5%)</td>
+                    <td>₹18.50</td>
+                </tr>
+
+                <tr>
+                    <td>Delivery Charge</td>
+                    <td>₹30</td>
+                </tr>
+
+                <tr>
+                    <td>Grand Total</td>
+                    <td>₹418.50</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            Thank you for your order 🙏 <br>
+            Visit Again!
+        </div>
+
+    </div>
+
+</body>
+
+</html>
